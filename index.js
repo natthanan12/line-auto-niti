@@ -8,6 +8,10 @@ const TOKEN =
   process.env.LINE_ACCESS_TOKEN ||
   "ud4p+TnCu5yf3DZBZgVGLlGxUbbYkKdwmdowHyRTZ7wUcmqevx6AwkHrqDCJ6iLyQByhEk3zrRtEDn6MORyqzaPL+B9MQGEhLKIDzFKKo9oluTxDIiOLq/bXsFoMfdCELX9TeCxanRsQCeceNdMkaQdB04t89/1O/w1cDnyilFU="
 
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`)
+})
+
 cron.schedule(
   "30 16 * * */1-6",
   async () => {
@@ -20,7 +24,7 @@ cron.schedule(
 )
 
 cron.schedule(
-  "35 13 * * */1-6",
+  "37 13 * * */1-6",
   async () => {
     notificationLine()
   },
@@ -274,6 +278,6 @@ function sendLine(data, userLine) {
   // Send data
 
   request.write(raw)
-  console.log(success)
+  console.log("success")
   request.end()
 }
