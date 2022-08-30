@@ -6,7 +6,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 const TOKEN =
   process.env.LINE_ACCESS_TOKEN ||
-  "ud4p+TnCu5yf3DZBZgVGLlGxUbbYkKdwmdowHyRTZ7wUcmqevx6AwkHrqDCJ6iLyQByhEk3zrRtEDn6MORyqzaPL+B9MQGEhLKIDzFKKo9oluTxDIiOLq/bXsFoMfdCELX9TeCxanRsQCeceNdMkaQdB04t89/1O/w1cDnyilFU="
+  "xxvcCF4XO+EEyIHzn8Tp+RQlv4LGYY6NgsQQX9itLEciOQ7Mzain74h5TMvvzUofgqcUEQMfClwoExI8pbVGqdrV+TrxpKLr8GZoLUh2GXv50hw5oLqNKMrih93Z1jajL1rMKn53Vg7KulvpQDrHNgdB04t89/1O/w1cDnyilFU="
 
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`)
@@ -24,7 +24,7 @@ cron.schedule(
 )
 
 cron.schedule(
-  "42 13 * * */1-6",
+  "45 13 * * */1-6",
   async () => {
     notificationLine()
   },
