@@ -204,6 +204,7 @@ function sendLine(data, userLine) {
         text: new Date().toLocaleTimeString("en-GB", {
           hour: "2-digit",
           minute: "2-digit",
+          timeZone: "Asia/Bangkok",
         }),
         wrap: true,
         color: "#666666",
