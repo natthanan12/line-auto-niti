@@ -24,17 +24,6 @@ cron.schedule(
 )
 
 cron.schedule(
-  "45 13 * * */1-6",
-  async () => {
-    notificationLine()
-  },
-  {
-    scheduled: true,
-    timezone: "Asia/Bangkok",
-  }
-)
-
-cron.schedule(
   "30 11 * * */1-6",
   async () => {
     notificationLine()
