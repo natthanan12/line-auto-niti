@@ -24,7 +24,7 @@ cron.schedule(
 )
 
 cron.schedule(
-  "30 11 * * */1-6",
+  "40 11 * * */1-6",
   async () => {
     notificationLine()
   },
