@@ -1,3 +1,4 @@
+STDOUT.sync = true
 var cron = require("node-cron")
 const https = require("https")
 const express = require("express")
@@ -14,6 +15,17 @@ app.listen(PORT, () => {
 
 cron.schedule(
   "30 16 * * */1-6",
+  async () => {
+    notificationLine()
+  },
+  {
+    scheduled: true,
+    timezone: "Asia/Bangkok",
+  }
+)
+
+cron.schedule(
+  "*/1 * * * */1-6",
   async () => {
     notificationLine()
   },
