@@ -1,4 +1,3 @@
-STDOUT.sync = true
 var cron = require("node-cron")
 const https = require("https")
 const express = require("express")
