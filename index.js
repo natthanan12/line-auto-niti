@@ -122,7 +122,9 @@ function queryProblemMachine(data, actionDate, connection) {
           )
         })
       })
-      userLine(filterProblemMachine)
+      if (filterProblemMachine.length > 0) {
+        userLine(filterProblemMachine)
+      }
     } else {
       console.log(err)
     }
