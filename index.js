@@ -23,10 +23,16 @@ cron.schedule(
   }
 )
 
-cron.schedule("*/1 * * * */1-6", async () => {}, {
-  scheduled: true,
-  timezone: "Asia/Bangkok",
-})
+cron.schedule(
+  "*/1 * * * */1-6",
+  async () => {
+    console.log("test running")
+  },
+  {
+    scheduled: true,
+    timezone: "Asia/Bangkok",
+  }
+)
 
 cron.schedule(
   "30 11 * * */1-6",
