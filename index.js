@@ -24,7 +24,18 @@ cron.schedule(
 )
 
 cron.schedule(
-  "40 11 * * */1-6",
+  "30 11 * * */1-6",
+  async () => {
+    notificationLine()
+  },
+  {
+    scheduled: true,
+    timezone: "Asia/Bangkok",
+  }
+)
+
+cron.schedule(
+  "*/15 * * * * */1-6",
   async () => {
     notificationLine()
   },
@@ -122,6 +133,7 @@ function queryProblemMachine(data, actionDate, connection) {
           )
         })
       })
+      console.log(filterProblemMachine.length)
       if (filterProblemMachine.length > 0) {
         userLine(filterProblemMachine)
       }
